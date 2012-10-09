@@ -1,0 +1,180 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  
+
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <RootNamespace>IronPython.Modules</RootNamespace>
+    <AssemblyName>IronPython.Modules</AssemblyName>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <BinPlaceSymbols>false</BinPlaceSymbols>
+    <WarningsNotAsErrors>618,1616,1685,3005,3008,649</WarningsNotAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <GenerateAssemblyAttribute>false</GenerateAssemblyAttribute>
+<OutputPath>$(SolutionDir)..\Bin\40\</OutputPath>
+<AssemblyOriginatorKeyFile>$(SolutionDir)Runtime\MSSharedLibKey.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly Condition="'$(SignAssembly)' == '' And Exists('$(AssemblyOriginatorKeyFile)')">true</SignAssembly>
+    <SignedSym Condition="'$(SignAssembly)' == 'true'">SIGNED</SignedSym>
+    <DelaySign>true</DelaySign>
+    <DefineConstants>$(SignedSym)</DefineConstants>
+    <BaseAddress>885063680</BaseAddress>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{155CE436-1669-4A48-8095-410F2430237F}</ProjectGuid>
+
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>$(SolutionDir)..\Bin\40\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;CODEPLEX_40;CLR4;SYSTEM_CORE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>$(SolutionDir)..\Bin\40\</OutputPath>
+    <DefineConstants>TRACE;CODEPLEX_40;CLR4;SYSTEM_CORE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Core" />
+    <Reference Include="System" Condition=" '$(SilverlightBuild)' != 'true' " />
+    <Reference Include="mscorlib, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" Condition=" '$(SilverlightBuild)' == 'true' ">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(SilverlightSdkPath)\mscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="System, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" Condition=" '$(SilverlightBuild)' == 'true' ">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(SilverlightSdkPath)\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" Condition=" '$(SilverlightBuild)' == 'true' ">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(SilverlightSdkPath)\System.Core.dll</HintPath>
+      <Aliases>systemcore</Aliases>
+    </Reference>
+    <Reference Include="System.Data" Condition=" $(SilverlightBuild) != 'true' " />
+    <Reference Include="System.Xml" Condition=" $(SilverlightBuild) != 'true' " />
+    <Reference Include="System.Numerics" Condition=" $(SilverlightBuild) != 'true' " />
+  </ItemGroup>
+  <!-- Begin Generated Project Items By GenerateSystemCoreCsproj.py -->
+    <ItemGroup>
+      <!--                    -->
+      <!--                    -->
+      <!--                    -->
+      <Compile Include="array.cs" />
+      <Compile Include="binascii.cs" />
+      <Compile Include="cmath.cs" />
+      <Compile Include="copy_reg.cs" />
+      <Compile Include="cPickle.cs" />
+      <Compile Include="cStringIO.cs" />
+      <Compile Include="datetime.cs" />
+      <Compile Include="errno.cs" />
+      <Compile Include="gc.cs" />
+      <Compile Include="GlobalSuppressions.cs" />
+      <Compile Include="IterTools.cs" />
+      <Compile Include="marshal.cs" />
+      <Compile Include="math.cs" />
+      <Compile Include="math.Generated.cs" />
+      <Compile Include="ModuleOps.cs" />
+      <Compile Include="NativeSignal.cs" />
+      <Compile Include="nt.cs" />
+      <Compile Include="operator.cs" />
+      <Compile Include="re.cs" />
+      <Compile Include="select.cs" />
+      <Compile Include="signal.cs" />
+      <Compile Include="socket.cs" />
+      <Compile Include="thread.cs" />
+      <Compile Include="time.cs" />
+      <Compile Include="xxsubtype.cs" />
+      <Compile Include="_bytesio.cs" />
+      <Compile Include="_codecs.cs" />
+      <Compile Include="_codecs_cn.cs" />
+      <Compile Include="_collections.cs" />
+      <Compile Include="_ctypes_test.cs" />
+      <Compile Include="_fileio.cs" />
+      <Compile Include="_functools.cs" />
+      <Compile Include="_heapq.cs" />
+      <Compile Include="_locale.cs" />
+      <Compile Include="_md5.cs" />
+      <Compile Include="_multibytecodec.cs" />
+      <Compile Include="_random.cs" />
+      <Compile Include="_sha.cs" />
+      <Compile Include="_sha256.cs" />
+      <Compile Include="_sha512.cs" />
+      <Compile Include="_sre.cs" />
+      <Compile Include="_ssl.cs" />
+      <Compile Include="_struct.cs" />
+      <Compile Include="_warnings.cs" />
+      <Compile Include="_weakref.cs" />
+      <Compile Include="_weakref.Generated.cs" />
+      <Compile Include="_winreg.cs" />
+    </ItemGroup>
+    <ItemGroup>
+      <!--                              -->
+      <!--          Properties          -->
+      <!--                              -->
+      <Compile Include="Properties\AssemblyInfo.cs" />
+    </ItemGroup>
+    <ItemGroup>
+      <!--                           -->
+      <!--          _ctypes          -->
+      <!--                           -->
+      <Compile Include="_ctypes\Array.cs" />
+      <Compile Include="_ctypes\ArrayType.cs" />
+      <Compile Include="_ctypes\CData.cs" />
+      <Compile Include="_ctypes\CFuncPtr.cs" />
+      <Compile Include="_ctypes\CFuncPtrType.cs" />
+      <Compile Include="_ctypes\Extensions.cs" />
+      <Compile Include="_ctypes\Field.cs" />
+      <Compile Include="_ctypes\INativeType.cs" />
+      <Compile Include="_ctypes\LocalOrArg.cs" />
+      <Compile Include="_ctypes\MarshalCleanup.cs" />
+      <Compile Include="_ctypes\MemoryHolder.cs" />
+      <Compile Include="_ctypes\NativeArgument.cs" />
+      <Compile Include="_ctypes\NativeFunctions.cs" />
+      <Compile Include="_ctypes\Pointer.cs" />
+      <Compile Include="_ctypes\PointerType.cs" />
+      <Compile Include="_ctypes\SimpleCData.cs" />
+      <Compile Include="_ctypes\SimpleType.cs" />
+      <Compile Include="_ctypes\SimpleTypeKind.cs" />
+      <Compile Include="_ctypes\StructType.cs" />
+      <Compile Include="_ctypes\Structure.cs" />
+      <Compile Include="_ctypes\Union.cs" />
+      <Compile Include="_ctypes\UnionType.cs" />
+      <Compile Include="_ctypes\_ctypes.cs" />
+    </ItemGroup>
+  <!-- End Generated Project Items By GenerateSystemCoreCsproj.py -->
+  <ItemGroup>
+    <Compile Include="..\AssemblyVersion.cs">
+      <Link>Properties\AssemblyVersion.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Runtime\Microsoft.Dynamic\Microsoft.Dynamic.Build.csproj">
+      <Project>{D4AE44AD-07B9-41DC-BB3B-1FDCDE3C987D}</Project>
+      <Name>Microsoft.Dynamic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Runtime\Microsoft.Scripting\Microsoft.Scripting.Build.csproj">
+      <Project>{EB66B766-6354-4208-A3D4-AACBDCB5C3B3}</Project>
+      <Name>Microsoft.Scripting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IronPython\IronPython.Build.csproj">
+      <Project>{95289EA9-5778-489D-AB48-F81F2CE2DA32}</Project>
+      <Name>IronPython</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
