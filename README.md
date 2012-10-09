@@ -1,1 +1,1 @@
-Microsoft's largely stopped active work on the DLR. This repo's a fork of the DLR source tree. I would be working on this, extending it, making it better, adapting it for web platforms as well. 
+Microsoft's largely stopped active work on the DLR. This repo's a fork of the DLR source tree. I would be working on this, extending it, making it better, adapting it for use in mobile platforms and robotics.
